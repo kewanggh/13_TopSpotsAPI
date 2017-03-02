@@ -13,7 +13,7 @@ namespace TopSpots
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var policy = new EnableCorsAttribute("*", "*", "*");
+            var policy = new EnableCorsAttribute("http://localhost:8080", "*", "*");
             config.EnableCors(policy);
             // Web API routes
             config.MapHttpAttributeRoutes();
